@@ -1,6 +1,7 @@
 #Deck
 class Deck:
 	'''Definition of a card deck.'''
+	from random import shuffle as rShuffle
 
 	def __init__(self,hasJoker=False):
 		self.suits  = ['H','D','S','C']
@@ -24,3 +25,9 @@ class Deck:
 	#Return how many cards are in deck
 	def sizeOf(self):
 		return len(self.cards)
+
+	#Shuffle deck and return the newly shuffled deck
+	def shuffle(self):
+		#Use random.shuffle() method
+		rShuffle(self.cards)
+		return self.cards
