@@ -20,3 +20,7 @@ class Deck:
 		#Remove from the back/bottom of deck
 		else:
 			return self.cards.pop()
+
+	#Return how many cards are in deck
+	def sizeOf(self):
+		return len(self.cards)
